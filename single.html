@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>The Title</title>
+    <!-- Required meta tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/libs/animate/animate.css">
+    <link rel="stylesheet" href="assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/libs/pickadate.js-master/lib/compressed/themes/default.css" />
+    <link rel="stylesheet" href="assets/libs/pickadate.js-master/lib/compressed/themes/default.date.css" />
+    <link rel="stylesheet" href="assets/libs/owl/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
+        type="text/css">
+    <style>
+        .map {
+            height: 450px;
+            width: 100%;
+            /* filter: grayscale(100%); */
+        }
+    </style>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+</head>
+
+<body>
+
+    <header class="main-header inner-header">
+        <nav class="navbar navbar-expand-lg navbar-light px-0">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo-inner.png" alt="" title="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars fa-fw"></i>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tourism Campanies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">En </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-search fa-fw"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-user fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="breadcrumb-sec">
+            <div class="container">
+                <ul>
+                    <li><a href=""><i class="fa fa-home fa-fw"></i> Home</a></li>
+                    <li><a href="">Trips</a></li>
+                    <li><a href="" class="disabled" aria-disabled="true">Bale Trip Safary</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content single-page">
+        <header class="single-header">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/slider.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/slider.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/slider.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="single-h-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <p>
+                                <i class="fa fa-star filled fa-fw"></i>
+                                <i class="fa fa-star filled fa-fw"></i>
+                                <i class="fa fa-star filled fa-fw"></i>
+                                <i class="fa fa-star fa-fw"></i>
+                                <i class="fa fa-star fa-fw"></i>
+                            </p>
+                            
+                            <h1>Bale Trip Safary</h1>
+                            <p><i class="fa fa-map-marker fa-fw"></i> London - 378 Ridgecrest Terrace</p>
+                            <p>
+                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+                            </p>
+                            <div class="author-price">
+                                <div class="price">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18.532" height="20.614" viewBox="0 0 14.532 16.614">
+                                        <g id="shopping-label" transform="translate(0.5 0.5)">
+                                            <path id="Path_6" data-name="Path 6" d="M1.5,16.114V6.746L8.266.5l6.766,6.246v9.369Z"
+                                                transform="translate(-1.5 -0.5)" fill="none" stroke="#fff" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"></path>
+                                            <circle id="Ellipse_53" data-name="Ellipse 53" cx="1.5" cy="1.5" r="1.5"
+                                                transform="translate(5.648 5.379)" stroke-width="1" stroke="#fff" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" fill="none"></circle>
+                                            <line id="Line_15" data-name="Line 15" x2="8" transform="translate(2.648 11.379)" fill="none"
+                                                stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                                stroke-width="1"></line>
+                                        </g>
+                                    </svg>
+                                    <p><span>256</span> <small>SAR</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="trip-numbers">
+            <div class="container">
+                <div class="row">
+                    <div class="col num-item">
+                        <h5>Code trip</h5>
+                        <span><i class="fas fa-qrcode fa-fw"></i> Jd542</span>
+                    </div>
+                    <div class="col num-item">
+                        <h5>City</h5>
+                        <span><i class="fa fa-map-marker-alt fa-fw"></i> London</span>
+                    </div>
+                    <div class="col num-item">
+                        <h5>Category</h5>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                            <g id="sort-tool" transform="translate(0.373 0.5)">
+                                <line id="Line_9" data-name="Line 9" x2="14" transform="translate(0.127)" fill="none" stroke="#fbb03b"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
+                                <line id="Line_10" data-name="Line 10" x2="10" transform="translate(2.127 4)" fill="none" stroke="#fbb03b"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
+                                <line id="Line_11" data-name="Line 11" x2="6" transform="translate(4.127 8)" fill="none" stroke="#fbb03b"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
+                                <line id="Line_12" data-name="Line 12" x2="3" transform="translate(5.127 13)" fill="none" stroke="#fbb03b"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
+                            </g>
+                        </svg>
+                         Cate</span>
+                    </div>
+                    <div class="col num-item">
+                        <h5>Duration</h5>
+                        <span><i class="fa fa-calendar-alt fa-fw"></i>
+                        3 days</span>
+                    </div>
+                    <div class="col num-item">
+                        <h5>Date</h5>
+                        <span><i class="fa fa-calendar-alt fa-fw"></i>
+                        20 May 2020</span>
+                    </div>
+                    <div class="col num-item greay">
+                        <h5>Status</h5>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="22.83" height="22.83" viewBox="0 0 22.83 22.83">
+                            <g id="priority-highest" transform="translate(-0.099 -0.099)">
+                                <rect id="Rectangle_921" data-name="Rectangle 921" width="15.143" height="15.143" rx="4"
+                                    transform="translate(11.514 0.806) rotate(45)" fill="none" stroke="#e9a53a" stroke-linecap="square"
+                                    stroke-miterlimit="10" stroke-width="1" />
+                                <path id="Path_11382" data-name="Path 11382" d="M15,17.155,19.155,13l4.155,4.155"
+                                    transform="translate(-7.641 -6.565)" fill="none" stroke="#e9a53a" stroke-linecap="square"
+                                    stroke-miterlimit="10" stroke-width="1" />
+                                <path id="Path_11383" data-name="Path 11383" d="M15,25.155,19.155,21l4.155,4.155"
+                                    transform="translate(-7.641 -10.871)" fill="none" stroke="#e9a53a" stroke-linecap="square"
+                                    stroke-miterlimit="10" stroke-width="1" />
+                            </g>
+                        </svg>
+                        Remain 1 person</span>
+                    </div>
+                    <div class="col num-item align-self-center">
+                        <button type="button" name="" class="btn btn-warning book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="map"></div>
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+
+        <div class="sechdule">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="schdule-item media">
+                            <h4>Activites</h4>
+                            <div class="text-strip">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui vel repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda cupiditate ducimus.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="schdule-item media">
+                            <h4>Schedule</h4>
+                            <div>
+                                <div class="collapse-item">
+                                    <h5><i class="fa fa-plus fa-fw"></i> Day 1</h5>
+                                    <div class="collapse-it">
+                                        <div class="text-strip">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                                vel
+                                                repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                                cupiditate
+                                                ducimus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <h5><i class="fa fa-plus fa-fw"></i> Day 1</h5>
+                                    <div class="collapse-it">
+                                        <div class="text-strip">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                                vel
+                                                repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                                cupiditate
+                                                ducimus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <h5><i class="fa fa-plus fa-fw"></i> Day 1</h5>
+                                    <div class="collapse-it">
+                                        <div class="text-strip">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                                vel
+                                                repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                                cupiditate
+                                                ducimus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <h5><i class="fa fa-plus fa-fw"></i> Day 1</h5>
+                                    <div class="collapse-it">
+                                        <div class="text-strip">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                                vel
+                                                repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                                cupiditate
+                                                ducimus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ml-auto">
+                        <div class="profile-badge">
+                            <figure>
+                                <img src="assets/images/person_5.jpg" alt="" title="" />
+                            </figure>
+                            <h4>Zellny Trips</h4>
+                            <p>
+                                <i class="fa fa-map-marker-alt fa-fw"></i> NYC - 378 Ridgecrest
+                            </p>
+                            <div class="rating-part">
+                                <p>
+                                    <i class="fa fa-star filled fa-fw"></i>
+                                    <i class="fa fa-star filled fa-fw"></i>
+                                    <i class="fa fa-star filled fa-fw"></i>
+                                    <i class="fa fa-star filled fa-fw"></i>
+                                    <i class="fa fa-star fa-fw"></i>
+                                </p>
+                            </div>
+                            <ul>
+                                <li><a href="callto: +966 7548 6548"><i class="fa fa-mobile-alt fa-fw"></i> +966 7548 6548</a></li>
+                                <li><a href="mailto: info@asfary.com"><i class="fa fa-envelope fa-fw"></i> info@asfary.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="includes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="inc-item">
+                            <h4><i class="fa fa-tags fa-fw"></i> Price Include</h4>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Food</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Hotels</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="inc-item">
+                            <h4><i class="fa fa-tags fa-fw"></i> Price Include</h4>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Food</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Hotels</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="inc-item">
+                            <h4><i class="fa fa-tags fa-fw"></i> Price Include</h4>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Food</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Hotels</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="inc-item">
+                            <h4><i class="fa fa-tags fa-fw"></i> Price Include</h4>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Food</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-item">
+                                <h5><i class="fa fa-plus fa-fw"></i> Hotels</h5>
+                                <div class="collapse-it">
+                                    <div class="text-strip">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deleniti rem ipsam perspiciatis qui
+                                            vel
+                                            repellendus suscipit maxime, omnis ea fuga enim repellat provident soluta doloribus quam assumenda
+                                            cupiditate
+                                            ducimus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing">
+            <div class="container">
+                <header class="team-header">
+                    <h4>Our Pricing & Plan</h4>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give
+                    you a complete account of the system</p>
+                </header>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="price-item">
+                            <div class="px-5 py-4">
+                                <img src="assets/images/pricing/Bicycle.svg" alt="" />
+                                <h4>Basic</h4>
+                                <span class="price">400 SAR</span>
+                                <hr>
+
+                                <ul>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" class="btn btn-info btn-block">Select</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="price-item">
+                            <div class="px-5 py-4">
+                                <img src="assets/images/pricing/Car_Rental.svg" alt="" />
+                                <h4>Basic</h4>
+                                <span class="price">400 SAR</span>
+                                <hr>
+
+                                <ul>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" class="btn btn-info btn-block">Select</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="price-item green">
+                            <div class="px-5 py-4">
+                                <img src="assets/images/pricing/Airplane.svg" alt="" />
+                                <h4>Basic</h4>
+                                <span class="price">400 SAR</span>
+                                <hr>
+
+                                <ul>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fa fa-plus fa-fw"></i>
+                                        <p>
+                                            But I must explain to you how all this
+                                            mistaken idea of denouncing
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" class="btn btn-info btn-block">Select</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-gallery">
+            <div class="container-fluid px-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="gallery-slider">
+                            <div class="owl-theme owl-carousel">
+                                <article class="gal-img">
+                                    <img src="assets/images/slider.png" alt="" title="" />
+                                </article>
+                                <article class="gal-img">
+                                    <img src="assets/images/slider.png" alt="" title="" />
+                                </article>
+                            </div>
+                            <ul id='carousel-custom-dots' class='owl-dots'>
+                                <li class='owl-dot'>
+                                    <img src="assets/images/slider.png" alt="" title="" />
+                                </li>
+                                <li class='owl-dot'><img src="assets/images/slider.png" alt="" title="" /></li>
+                                <li class='owl-dot'></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="gal-text">
+                            <h4>Tourists Gallery</h4>
+                            <div class="text-strip">
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give
+                                you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
+                                master-builder of human happiness. pursue pleasure rationally encounter consequences that are extremely</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <div class="container">
+                <header class="team-header">
+                    <h4>What tourists said</h4>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure But I must explain to you how all
+                        this mistaken idea of denouncing pleasure and praising pain was born and I will give
+                        you a complete account of the system</p>
+                </header>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="footer-item">
+                        <h4>About Asfary</h4>
+                        <p>
+                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give
+                            you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
+                            master-builder of human happiness. pursue pleasure rationally encounter consequences that are extremely
+                        </p>
+
+                        <p class="c-rights">All Copy right asfary 2020 ©</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4>Fast Link</h4>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Tours</a></li>
+                            <li><a href="">Tourism Companies</a></li>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item cont">
+                        <h4>Contact us</h4>
+                        
+                        <p><i class="fa fa-envelope fa-fw"></i> info@asfary.com</p>
+                        <p><i class="fa fa-phone-alt fa-fw"></i> +966 7548 6548</p>
+
+                        <ul class="social-ul">
+                            <li><a href=""><i class="fab fa-facebook-f fa-fw"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram fa-fw"></i></a></li>
+                            <li><a href=""><i class="fab fa-youtube fa-fw"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/vendor/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/libs/animate/wow.min.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="assets/libs/pickadate.js-master/lib/picker.js"></script>
+    <script src="assets/libs/pickadate.js-master/lib/picker.date.js"></script>
+    <script src="assets/libs/owl/owl.carousel.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script type="text/javascript">
+        /* Create the map */
+
+        // Elements that make up the popup
+        var container = document.getElementById('popup');
+        var content = document.getElementById('popup-content');
+        var closer = document.getElementById('popup-closer');
+
+        // Add a click handler to hide the popup.
+        // @return {boolean}.
+        closer.onclick = function () {
+            overlay.setPosition(undefined);
+            closer.blur();
+            return false;
+        };
+
+        // Create an overlay to anchor the popup
+        // to the map
+        var overlay = new ol.Overlay({
+            element: container,
+            autoPan: true,
+            autoPanAnimation: {
+                duration: 250
+            }
+        });
+
+        // setting up coordinates for map to display
+        var city = ol.proj.transform([-23.927870, 40.763633], 'EPSG:4326', 'EPSG:3857');
+
+        // setting up openlayer3 view
+        var view = new ol.View({
+            center: city,
+            zoom: 3
+        });
+
+        // Create the map
+        var map = new ol.Map({
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM({
+                        crossOrigin: 'anonymous'
+                    })
+                })
+            ],
+            overlays: [overlay],
+            target: 'map',
+            view: view
+        });
+
+        // Setup markers
+        var markers = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-23.927870, 40.763633])),
+                        name: 'Crescent St',
+                        description: 'Apartment',
+                        slideId: 1
+                    }),
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-73.917356, 50.763958])),
+                        name: 'Long Island City',
+                        description: 'Apartment',
+                        slideId: 2
+                    })
+                ]
+            }),
+            style: new ol.style.Style({
+                image: new ol.style.Icon( /** @type {olx.style.IconOptions} */({
+                    anchor: [0.5, 46],
+                    anchorXUnits: 'fraction',
+                    anchorYUnits: 'pixels',
+                    src: 'https://openlayers.org/en/v5.3.0/examples/data/icon.png'
+                }))
+            })
+        });
+        map.addLayer(markers);
+
+        // Setting up click handler for the map
+        // to render the popup
+        map.on('singleclick', function (evt) {
+            var name = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+                // alert( feature.get('slideId') );
+                var owlNumber = feature.get('slideId');
+                // to.owl.carousel
+                $('.project-slider').trigger('to.owl.carousel', owlNumber, 300);
+                return feature.get('name');
+            })
+            var coordinate = evt.coordinate;
+            content.innerHTML = name;
+            overlay.setPosition(coordinate);
+        });
+        map.on('pointermove', function (evt) {
+            map.getTargetElement().style.cursor = map.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
+        });
+
+
+    </script>
+</body>
+
+</html>
